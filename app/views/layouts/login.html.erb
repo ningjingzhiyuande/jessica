@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>简洁干净兼容IE6的后台管理系统模版JsAdmin - JS代码网</title>
+    <%= stylesheet_link_tag    "admin"%>
+    <%= javascript_include_tag "admin" %>
+   
+    <%= csrf_meta_tags %>
+
+	<!--[if IE 6]>
+	<link href="css/ie6.css" rel="stylesheet" media="all" />
+	
+	<script src="js/pngfix.js"></script>
+	<script>
+	  /* EXAMPLE */
+	  DD_belatedPNG.fix('.logo, .other ul#dashboard-buttons li a,#sitename a.logo,#navigation li a,.ui-widget-header .ui-icon');
+
+	</script>
+	<![endif]-->
+	<!--[if IE 7]>
+	<link href="css/ie7.css" rel="stylesheet" media="all" />
+	<![endif]-->
+</head>
+<body>
+<div id="header">
+		<div id="top-menu">
+			<!--<a href="#" title="My account">我的账号</a> |
+			<a href="#" title="Settings">设置</a> |
+			<a href="#" title="Contact us">联系我们</a>	-->		
+			<span>你好，<a href="#" title="Logged in as admin">admin</a></span>
+			<!--| <a href="#" title="Edit profile">编辑资料</a>-->
+			| <a href="#" title="Logout">退出</a>
+		</div>
+		<div id="sitename">
+			<div class="logo">
+               <a href="index.html" class="float-left" title="后台管理系统">
+               	杰西卡英语培训后台管理
+               </a>
+			</div>
+		</div>
+				<ul id="navigation" class="sf-navbar">
+			<li>
+				<a href="index.html" class="current">控制台</a>
+				
+			</li>
+			<li>
+				<a href="#">菜单</a>
+				
+			</li>
+			<li>
+				<a href="#">布局选项</a>
+				
+			</li>
+			<li>
+				<a href="#">可用组件</a>
+				
+			</li>
+		</ul>
+		
+</div>	
+
+	<div id="page-wrapper">
+	  
+
+<%= yield %>
+
+	</div>
+	<div class="clearfix"></div>
+	<div id="footer">
+		<div id="menu">
+			<a href="#" title="Home">Home</a>
+			<a href="#" title="Administration">Administration</a>
+			<a href="#" title="Settings">Settings</a>
+			<a href="#" title="Contact">Contact</a>
+		</div>
+		Copyright &copy; 2009 - Horia Simon 
+	</div>
+ 
+</body>
+</html>

@@ -1,0 +1,15 @@
+<ul>
+	<%advantages = Advantage.all.limit(4)%>
+	<%advantages.each do |a|%>
+		<li>
+		<div class="new_park02_img">
+			<%=image_tag a.image_url,width: 205,height: 205%>
+
+		<a href="#" class="hover1s">
+		</a>
+		</div>
+		<h3><a href="javacirpt:void(0)" class="hover1s"><%=a.title%></a></h3>
+	<p><%=a.info%></p>
+</li>
+	<%end%>						
+</ul>

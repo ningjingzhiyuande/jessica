@@ -1,0 +1,269 @@
+
+	/* General */
+
+.column-fixed .form-container {
+	margin:0 1em 1em 0;
+}
+
+.form-container {
+	background:#f8f8f8!important;
+	margin:0;
+}
+
+form ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	width:100%;
+}
+form li{
+	display:block;
+	margin:0;
+	padding:6px 0 9px;
+	clear:both;
+}
+form li:after, form li div:after{
+	content:"."; 
+	display:block;
+	height:0; 
+	clear:both; 
+	visibility:hidden;
+}
+* html form li{height: 1%;}
+* html form li div{display:inline-block;}
+*+html form li div{display:inline-block;}
+
+form li div, form li span{
+	margin:0 .3em 0 0;
+	padding:0;
+	color:#444;
+}
+form li span{
+	float:left;
+}
+
+	/* Inputs */
+
+input.text, input.file, textarea.textarea, select.select{
+	color:#333;
+	margin:0;
+	padding:4px;
+}
+input.text, textarea.textarea{
+	border-top:1px solid #7c7c7c;
+	border-left:1px solid #c3c3c3;
+	border-right:1px solid #c3c3c3;
+	border-bottom:1px solid #ddd;
+}
+
+
+/* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+/* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+.styled-select {
+
+   overflow: hidden;
+   width: 100px;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+
+   padding: 2px; /* If you add too much padding here, the options won't show in IE */
+   width: 68px;
+}
+
+.styled-select.slate {  
+   height: 25px;
+   width: 140px;
+}
+
+.styled-select.slate select {
+   border: 1px solid #ccc;
+   font-size: 16px;
+   height: 25px;
+   width: 140px;
+}
+
+
+
+input.checkbox, input.radio{
+	display:block;
+	margin:4px 0 0 0;
+	padding:0;
+	width:13px;
+	height:13px;
+}
+input.other{
+	margin:0 0 8px 25px;
+}
+
+.safari select.select{
+	font-size:120% !important;
+	margin:0 0 1px 0;
+}
+* html select.select{
+	margin:1px 0;
+}
+*+html select.select{
+	margin:1px 0;
+	border:1px solid red;
+}
+
+	/* Size */
+
+input.small, select.small{
+	width:25%;
+}
+
+input.medium, select.medium{
+	width:50%;
+}
+
+select.article_select{height:40px;}
+
+input.large, select.large, textarea.textarea {
+	width:70%;
+}
+
+input.full, select.full, textarea.full {
+	width:99%;
+}
+
+textarea.small{
+	height:5.5em;
+}
+
+textarea.medium{
+	height:10em;
+}
+
+textarea.large{
+	height:20em;
+}
+
+	/* Buttons */
+
+input.btTxt{
+	padding:0 7px;
+	width:auto;
+	overflow:visible;
+}
+form li.buttons{
+	clear:both;
+	padding-top:10px;
+}
+form li.buttons input{
+	font-size:120%;
+	margin-right: 5px;
+}
+
+	/* Labels */
+
+form li div label, form li span label{
+	margin:0;
+	padding-top:6px;
+	clear:both;
+	font-size:85%;
+	line-height:100%;
+	color:#444;
+	display:block;
+}
+form li div span label{
+	padding-bottom:12px;
+}
+label.desc{
+	font-size:95%;
+	font-weight:bold;
+	color:#222;
+	line-height:150%;
+	margin:0;
+	padding:0 0 3px 0;
+	border:none;
+	display:block;
+}
+label.choice{
+	display:block;
+	font-size:100%;
+	line-height:150%;
+	margin:-17px 0 0 23px;
+	padding:0 0 5px 0;
+	color:#222;
+	width:88%;
+}
+form li span{
+	
+	float:left;
+}
+form li span.width_align_right{
+	line-height: 24px;
+	width:7%; 
+	text-align: right;
+	font-weight: bold;
+	padding-right: 5px;
+
+}
+form li span.width_content{
+	line-height: 24px;
+	width:85%; 
+	text-align: left;
+	padding-right: 5px;
+
+}
+
+	/* Required */
+
+form span.req{
+	display:inline;
+	float:none;
+	color:red !important;
+	font-weight:bold;
+}
+
+.submit_button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf) );
+	background:-moz-linear-gradient( center top, #63b8ee 5%, #468ccf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
+	background-color:#63b8ee;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #3866a3;
+	display:inline-block;
+	color:#14396a;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:65px;
+	line-height:65px;
+	width:131px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #7cacde;
+}
+.submit_button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+	background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
+	background-color:#468ccf;
+}.submit_button:active {
+	position:relative;
+	top:1px;
+}
+
+.follow_msg{font-size: 12px;color: #777777;padding-left: 10px;}

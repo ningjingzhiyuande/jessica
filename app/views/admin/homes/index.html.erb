@@ -1,0 +1,95 @@
+<div id="main-wrapper">
+	<div id="main-content">
+		<%=render "layouts/notice"%>
+		<div class="page-title">
+		  		<div class="other">
+						<div class="float-left">添加关于我们，图片视频</div>
+						<div class="button float-right">
+
+							<a href="/admin/homes/new?kind=about_us"  class="btn ui-state-default"><span class="ui-icon ui-icon-circle-plus"></span>编辑我们</a>
+								<a href="/admin/homes/new?kind=image"  class="btn ui-state-default"><span class="ui-icon ui-icon-circle-plus"></span>添加图片</a>
+									<a href="/admin/homes/new?kind=vido"  class="btn ui-state-default"><span class="ui-icon ui-icon-circle-plus"></span>添加视频</a>
+						</div>
+						<div class="clearfix"></div>
+					</div>		
+		</div>
+	
+
+
+        <div class="hastable">
+					
+						<table id="datatable" class="display"> 
+						<thead> 
+						<tr>
+							<th>#ID</th>
+							<th>类别</th>
+							<th>标题</th>
+						    
+						    <th>简介</th> 
+						    			   
+						    <th>操作</th> 
+							
+						</tr> 
+						</thead> 
+						<tbody> 
+						<% @homes.each do |article| %>
+						<tr>
+							<td class="center"><%=article.id%></td> 
+						    <td><%=article.title=="关于我们" ? "关于我们" : (article.url.blank? ? "图片" : "视频")%></td>
+							<td><%=article.title%></td> 				
+						    <td><%= article.title=="关于我们" ? truncate(article.content,length: 40) : (article.url.blank? ? article.info : "无")  %></td> 
+						   <!-- <td><%#= article.title=="关于我们" ? "无" : (article.url.blank? ? "无" : "视频")  %></td> 
+						   -->
+						    <td>
+						    	  <!--       <%unless article.first?%>
+                   <a href="javascript:;" class="go_up" id='<%=article.id%>'> <i class="fa fa-long-arrow-up">UP</i> </a><%#= link_to '查看子类', "#",:class=>"look_sub"%> | 
+                   <%end%>
+                  <%unless article.last?%>
+                   <a href="javascript:;" class="go_down" id='<%=article.id%>'><i class="fa fa-long-arrow-down">Down</i></a>  | 
+                  <%end%> -->
+                   <%=link_to  "编辑", edit_admin_home_path(article) %> |
+                   <%=link_to  "删除", admin_home_path(article), method: :delete, data: { confirm: 'Are you sure?' } %> 
+
+							
+							</td>
+					
+						</tr> 
+					   <%end%>			
+						</tbody>
+						</table>
+						<%#=paginate @users%>
+
+
+
+</div>
+<div class="clearfix"></div>
+</div>
+
+</div>
+
+	
+<script>
+$(function() {
+
+$('#datatable').dataTable({
+    "oLanguage": {
+      "sLengthMenu": "每页显示 _MENU_ 条记录",
+      "sZeroRecords": "对不起，查询不到任何相关数据",
+      "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条记录",
+      "sInfoEmtpy": "找不到相关数据",
+      "sInfoFiltered": "数据表中共为 _MAX_ 条记录)",
+      "sProcessing": "正在加载中...",
+      "sSearch": "搜索",
+      "sUrl": "", //多语言配置文件，可将oLanguage的设置放在一个txt文件中，例：Javascript/datatable/dtCH.txt
+      "oPaginate": {
+          "sFirst":    "第一页",
+          "sPrevious": " 上一页 ",
+          "sNext":     " 下一页 ",
+          "sLast":     " 最后一页 "
+      }
+  }
+
+})  
+})
+</script>
+

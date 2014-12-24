@@ -1,0 +1,14 @@
+<%services = Service.where("type='Service'").limit(8)%>
+<%services.each do |s|%>
+<div class="park01_one">
+	<div class="park01_one_img">
+		<strong>
+		  <%=s.title[0]%>
+		</strong>
+			<p><%=raw s.en_title.gsub(" ","<br/>")%></p>
+						</div>
+						<h2><%=s.title%></h2>
+						<p><%=s.info%></p>
+					</div>
+<%end%>
+					

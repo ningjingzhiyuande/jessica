@@ -1,0 +1,277 @@
+<div class="wrap">
+			<header id="header">
+				<div id="logo">
+					<a href="#"></a>
+
+				</div>
+				<div class="header_right">
+					<ul id="nav">
+						<li class="current"><i class="icon-home"></i>
+						</li>
+						<li>Services</li>
+						<li>Advantage</li>
+						<li>Article</li>
+						<li>About Us</li>
+						<li>Contact</li>
+
+					</ul>
+
+				</div>
+
+			</header>
+
+			<section id="banner" style="background:#003583 url(images/top_bk.jpg) center no-repeat;">
+				<!--<ul id="bannerul">
+					<li>
+						<h1>Free Onepage Theme</h1>
+						<p class="lead">Xeon is the best free onepage responsive theme available arround the globe
+							<br>Download it right now for free</p>
+					</li>
+					<li>
+						<h1>ShapeBootstrap.net</h1>
+						<p class="lead">Download free but 100% premium quaility twitter Bootstrap based WordPress and HTML themes
+							<br>from shapebootstrap.net</p>
+					</li>
+				</ul>
+				<a href="#" class="banner_left_btn  hover1s">
+					< </a>
+						<a href="#" class="banner_right_btn hover1s"> > </a>-->
+
+			</section>
+
+			<div class="park_wrap">
+				<section class="park01">
+					 <%=render "service"%>
+				</section>
+				<section class="new_park02">
+					<header>
+						<div>
+							<strong>与来自全球两千位以上的外籍顾问在线面对面</strong>
+							<p>即时互动学习随时随地、立即开口、即学即用、轻轻松松就把英文学好了！</p>
+						</div>
+					</header>
+					<div class="new_park02_content">
+						<%=render "advantage"%>
+						
+
+
+					</div>
+
+
+
+					<div class="blank30"></div>
+
+				</section>
+				<div class="park_gg">
+					<a href="#">
+						<img src="images/peixun_04.jpg" width="1140" height="380" alt="">
+					</a>
+
+				</div>
+
+
+				<section class="park03">
+					<header>
+						<h1>咨讯中心 / Advisory Center</h1>
+					</header>
+
+					<div class="park03_list_box">
+						<div class="park03_list_one park03_list_first hover1s">
+							<h2><a href="#">热点新闻</a></h2>
+							<ul id="hot_news">
+
+								
+							</ul>
+							<div class="more_list hover1s pagination" id="hot_new1" data-id="hot_news" data-num=6>
+								<a href="#" class="icon-fonts">查看<i>更多</i>热点咨讯 </a>
+							</div>
+						</div>
+						<div class="park03_list_one park03_list_second hover1s">
+							<h2><a href="#">新闻资讯</a></h2>
+							<ul id="news">
+								
+							</ul>
+							<div class="more_list hover1s pagination" id="new1" data-id="news" data-num=8>
+								<a href="#" class="icon-fonts">查看<i>更多</i>热点咨讯 </a>
+							</div>
+						</div>
+						<div class="park03_list_one park03_list_third hover1s">
+							<h2><a href="#">系统公告</a></h2>
+							<ul id="notice">
+								
+							</ul>
+							<div class="more_list hover1s pagination" id="notice1" data-id="notice" data-num=6>
+								<a href="#" class="icon-fonts">查看<i>更多</i>热点咨讯 </a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="new_park04">
+					<header>
+						<h1><img src="images/gsjanje.jpg" alt="公司简介"></h1>
+						<div class="blank10"></div>
+						<p><%=Home.where("title='关于我们'").first.try(:content)%></p>
+					</header>
+					<div class="blank20"></div>
+					<div class="new_park04_content" id="new_park04_content">
+						<ul>
+							<%@images.each_with_index do |image,index|%>
+							<%if index<3%>
+							
+							<li class="liwith336">
+                                 <%=generate_html_for_image(image,357,214)%>				
+							</li>
+							<%end%>
+							<%if index>2 && index<5%>
+							 <li class="liwith204">
+								 <%=generate_html_for_image(image,204,214)%>
+
+							</li>
+							<%if index==6%>
+							<li class="liwith446">
+								 <%=generate_html_for_image(image,446,214)%>
+							</li>
+							<%end%>
+
+							<%end%>
+							<%end%>
+						
+						</ul>
+
+
+					</div>
+					<div class="blank30"></div>
+				</section>
+				<section class="park05">
+					<div class="park05_left">
+						<h1>Contact Us</h1>
+						<p>If you have any questions,Please contact us.</p>
+						<div class="blank10"></div>
+						<div class="from_box">
+							<form>
+								<div class="name_email">
+									<input type="text" class="inputtext" name="name" value="name" onfocus="if(this.value=='name'){this.value='' }" onblur="if(this.value==''){this.value='name'}" style="margin-right:30px; ;" />
+
+									<input type="text" class="inputtext" name="email" value="email" onfocus="if(this.value=='email'){this.value='' }" onblur="if(this.value==''){this.value='email'}" />
+
+								</div>
+								<div class="blank20"></div>
+								<textarea value="message" onfocus="if($.trim(this.value)=='message'){this.value='' }" onblur="if($.trim(this.value)==''){this.value='message'}">
+								</textarea>
+								<div class="blank20"></div>
+								<input type="submit" value="Send Message" class="sub" />
+							</form>
+						</div>
+					</div>
+					<div class="park05_right">
+						<h1>Our Address</h1>
+						<p class="address">
+							<strong>杰西卡国际教育咨询有限公司</strong>
+							<br /> 北京市朝阳区百子湾路16号
+							<br /> 后现代城2号楼A单元1105室
+							<br /> P: 010-61994401
+						</p>
+						<p class="address">
+							<strong>Jessica's Education .INC</strong>
+							<br /> Room 1105 NO.2, A Building,HouXianDaiCheng
+							<br /> 16 BaiZiWan Road,ChaoYang District BeiJing City
+							<br /> P: 010-61994401
+						</p>
+
+						<div class="blank10"> </div>
+						<ul class="icon-social">
+							<img src="http://api.map.baidu.com/staticimage?width=700&height=200&center=北京朝阳区百子湾路16号&markers=后现代城2号楼A单元1105室&zoom=12&markerStyles=l,A,0xff0000"/>
+
+						</ul>
+
+
+					</div>
+					<div class="blank10"></div>
+				</section>
+
+
+
+			</div>
+
+
+        <script type="text/javascript">
+
+          
+            <%hot_news = @hot_news.map{|article|[article.title,article.id]}%>
+            <%news = @news.map{|article|[article.title,article.id]}%>
+            <%notices = @notices.map{|article|[article.title,article.id]}%>
+            var hot_news=<%= hot_news.to_s.html_safe%>
+            var news=<%= news.to_s.html_safe%>
+            var notices=<%= notices.to_s.html_safe%>
+
+           function pageselectCallback(page_index, jq){
+                // Get number of elements per pagionation page from form
+                var items_per_page = $(jq).attr("data-num")
+                var newcontent = '';
+                var data_id = $(jq).attr("data-id")
+                if(data_id=="hot_news"){
+                	 var max_elem = Math.min((page_index+1) * items_per_page, hot_news.length);
+                }
+                if(data_id=="news"){
+                	var max_elem = Math.min((page_index+1) * items_per_page, news.length);         
+                }
+                if(data_id=="notice"){
+                	var max_elem = Math.min((page_index+1) * items_per_page, notices.length);  
+                }          
+
+               
+          
+                
+                // Iterate through a selection of the content and build an HTML string
+                for(var i=page_index*items_per_page;i<max_elem;i++)
+                {
+                	if(data_id=="hot_news"){
+                		 newcontent += '<li><a href="javascript:void(0)" class="artile_show" data-id='+ hot_news[i][1]+'>' + hot_news[i][0].substr(0,20) + '</a></li>';
+                	}
+                	if(data_id=="news"){
+                		 newcontent += '<li><a href="javascript:void(0)" data-id='+ news[i][1]+'>' + news[i][0].substr(0,20) + '</a></li>';
+
+                	}
+                	if(data_id=="notice"){
+                		 newcontent += '<li><a href="javascript:void(0)" class="artile_show" data-id='+ notices[i][1]+'>'+ notices[i][0].substr(0,20) + '</a></li>';
+
+                	}          
+                  
+                }
+
+                // Replace old content with new content
+                $("#"+data_id).html(newcontent);
+
+                // Prevent click eventpropagation
+                return false;
+            }
+
+             
+              $(document).ready(function(){
+
+                $("#hot_new1").pagination(hot_news.length,{callback: pageselectCallback,items_per_page: 6,prev_text: "往前看看",next_text: "继续查看"})
+                $("#new1").pagination(news.length,{callback: pageselectCallback,items_per_page: 8,prev_text: "往前看看",next_text: "继续查看"})
+                $("#notice1").pagination(notices.length,{callback: pageselectCallback,items_per_page: 6,prev_text: "往前看看",next_text: "继续查看"})
+
+                
+
+            });
+
+
+            
+
+        </script>
+
+			<footer id="footer">
+
+				<p>© 2013 ShapeBootstrap. All Rights Reserved
+				</p>
+
+			</footer>
+
+
+		</div>
+
+

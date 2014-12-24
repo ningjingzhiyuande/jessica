@@ -1,0 +1,9 @@
+zh-CN:
+  helpers:
+      label:
+        date_setting:
+          year: "选在设定的年份：" 
+
+  hot_news: "热点新闻"
+  news: "新闻资讯"
+  notice: "系统公告"

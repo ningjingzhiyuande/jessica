@@ -1,0 +1,31 @@
+<div style="height:500px">
+    <div class="portlet form-bg"  style="width:50%;margin:0 auto;background-color:#FFEBC1;margin-top:30px;border: 2px solid #FDBF3B;padding:10px">
+    <div class="portlet-content">
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+		<li>
+		  <label class="desc">login name:</label>
+		  <div><%= f.text_field :name, autofocus: true ,tabindex: "1", maxlength: "255" , class: "field text full"%></div>
+	    </li>
+	    <li>
+		  <label class="desc">password:</label>
+         <div> <%= f.password_field :password, autocomplete: "off" ,tabindex: "1", maxlength: "255" , class: "field text full"%></div>
+	    </li>
+	     <li>
+		  <label class="desc">password confirm:</label>
+         <div> <%= f.password_field :password_confirmation, autocomplete: "off" ,tabindex: "1", maxlength: "255" , class: "field text full"%></div>
+	    </li>
+       <li class="buttons">
+		<button type="submit" value="Submit" class="ui-state-default ui-corner-all" id="saveForm">注册</button>
+   </li>
+	</ul>
+
+<% end %>
+</div>
+</div>
+</div>
+
+
+	
+

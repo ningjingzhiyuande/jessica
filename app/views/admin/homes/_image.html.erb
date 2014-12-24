@@ -1,0 +1,56 @@
+
+<%= form_for([:admin,@home],:html=>{class: "new_article"}) do |f| %>
+  
+<ul>
+
+	<li> 
+		<span class="width_align_right">名称</span> 
+       <span class="width_content">
+       	<%=f.text_field :title,class: "field text medium"%>    <b class="follow_msg">最好五六个字</b>
+       </span>
+    </li> 
+
+   <li> 
+		<span class="width_align_right">描述 </span>
+		<span class="width_content"><%= f.text_area :info ,class: "text_area",cols: 83,rows: 4%></span>    
+    </li>
+    <li> 
+		<span class="width_align_right">图片 </span>
+		<span class="width_content">
+           <%= image_tag(@home.image_url,width:205, height: 205) if @home.image? %> <br/>
+			<%= f.file_field :image%></span>    
+    </li>
+
+
+    <li><span class="width_align_right">  <p></p> </span>
+    	<span class="width_content">
+    <%= f.submit '提交',:class=>"submit_button"%></span>
+  </div></li>
+    
+</ul>
+  
+<% end %>
+
+	
+<script>
+$(function() {
+
+    $(".new_article").validate({
+    	//errorElement: "b",    	
+        rules: {
+       	 "article[title]": "required",
+         content: {required: true}
+        },
+       messages:{   
+        content: { required: "请输入商品详细信息！"}
+       
+    }
+
+})
+
+})
+</script>
+
+
+
+

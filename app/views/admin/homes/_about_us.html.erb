@@ -1,0 +1,25 @@
+
+<%= form_for([:admin,@home],:html=>{class: "new_article"}) do |f| %>
+<ul>
+
+	<li> 
+		<span class="width_align_right">服务名称</span> 
+       <span class="width_content">
+       	<%=f.text_field :title,class: "field text medium",value: "关于我们", :readonly => true %>  
+       </span>
+    </li> 
+   
+   <li> 
+		<span class="width_align_right">服务简介 </span>
+		<span class="width_content"><%= f.text_area :content ,class: "text_area",cols: 83,rows: 14%></span>    
+    </li>
+    
+   
+    <li><span class="width_align_right">  <p></p> </span>
+    	<span class="width_content">
+    <%= f.submit '提交',:class=>"submit_button"%></span>
+  </div></li>
+    
+</ul>
+  
+<% end %>
