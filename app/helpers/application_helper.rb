@@ -4,7 +4,7 @@ module ApplicationHelper
 		if image.url.blank? 
              html = html + image_tag(image.image_url,width: width,height: height)
              html = html + '<div class="li_top_box">'
-			 html = html +	'<h3><a href="#"><span  class="icon-fonts"></span>'+image.title+'</a></h3>'
+			 html = html +	'<h3><a href="javascript:void(0)"><span  class="icon-fonts"></span>'+image.title+'</a></h3>'
 			 html = html +  "<p>#{image.info}</p>"
 			 html = html +  "</div>"
 		else

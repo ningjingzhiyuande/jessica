@@ -71,42 +71,42 @@ body {
 	/* States and Images */
 
 .ui-icon { 
-	background-image:url(images/icons-blue.png);
+	background-image:url(/assets/admin/images/icons-blue.png);
 }
 
 .ui-widget-content .ui-icon {
-	background-image: url(images/icons-blue.png);
+	background-image: url(/assets/admin/images/icons-blue.png);
 }
 
 .ui-widget-header .ui-icon {
-	background-image: url(images/icons-lgray.png);
+	background-image: url(/assets/admin/images/icons-lgray.png);
 }
 
 .ui-state-default .ui-icon {
-	background-image:url(images/icons-lgray.png);
+	background-image:url(/assets/admin/images/icons-lgray.png);
 }
 
 .ui-state-hover .ui-icon {
-	background-image: url(images/icons-gray.png);
+	background-image: url(/assets/admin/images/icons-gray.png);
 }
 
 .ui-state-focus .ui-icon {
-	background-image: url(images/icons-blue.png);
+	background-image: url(/assets/admin/images/icons-blue.png);
 }
 
 .ui-state-active .ui-icon {
-	background-image:url(images/icons-blue.png);
+	background-image:url(/assets/admin/images/icons-blue.png);
 }
 
 .ui-state-highlight .ui-icon {
-	background-image:url(images/icons-blue.png);
+	background-image:url(/assets/admin/images/icons-blue.png);
 }
 
 	/* Component containers */
 
 .ui-widget-content {
 	border: 1px solid #ddd;
-	background: #fff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;
+	background: #fff url(/assets/admin/images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;
 	color:#444;
 }
 
@@ -116,7 +116,7 @@ body {
 
 .ui-widget-header {
 	border:1px solid #ddd;
-	background:#ddd url(images/ui-bg_highlight-soft_50_dddddd_1x100.png) 50% 50% repeat-x;
+	background:#ddd url(/assets/admin/images/ui-bg_highlight-soft_50_dddddd_1x100.png) 50% 50% repeat-x;
 	color:#fff;
 	text-transform:uppercase;
 }
@@ -129,7 +129,7 @@ body {
 
 .ui-state-default, .ui-widget-content .ui-state-default, .pagination a {
 	border:1px solid #ddd;
-	background:#f6f6f6 url(images/ui-bg_highlight-soft_100_f6f6f6_1x100.png) 50% 50% repeat-x;
+	background:#f6f6f6 url(/assets/admin/images/ui-bg_highlight-soft_100_f6f6f6_1x100.png) 50% 50% repeat-x;
 	font-weight:bold;
 	color:#0073ea;
 	outline:none;
@@ -142,7 +142,7 @@ body {
 
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .pagination a:hover, a.btn:hover, button.ui-state-default:hover {
 	border: 1px solid #9d9d9d;
-	background:#0073ea url(images/ui-bg_highlight-soft_25_0073ea_1x100.png) 50% 50% repeat-x;
+	background:#0073ea url(/assets/admin/images/ui-bg_highlight-soft_25_0073ea_1x100.png) 50% 50% repeat-x;
 	font-weight:bold;
 	color:#333;
 	outline:none;
@@ -155,7 +155,7 @@ body {
 
 .ui-state-active, .ui-widget-content .ui-state-active {
 	border:1px solid #ddd!important;
-	background: #fff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+	background: #fff url(/assets/admin/images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
 	font-weight:bold;
 	color:#333;
 	outline:none;
@@ -178,7 +178,7 @@ a:hover, .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited
 	/* Header Style */
 
 #header {
-		background:url(images/htai_01.jpg) center;
+		background:url(/assets/admin/images/htai_01.jpg) center;
 		height:190px;
 }
 
@@ -198,7 +198,7 @@ a:hover, .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited
 #header #sitename .logo{
  	display:block; width:610px; height:80px;
  	color:#fff;
- 	background:url(logo.png) no-repeat center left;
+ 	background:url(/assets/admin/logo.png) no-repeat center left;
  	text-shadow:1px 1px 0 #000;
 
 }
@@ -226,12 +226,12 @@ a:hover, .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited
 }
 
 #navigation li a:hover {
-	background:url(images/bk20.png)
+	background:url(/assets/admin/images/bk20.png)
 
 }
 #navigation li a.current{
 	
-	background:url(images/bk20.png)
+	background:url(/assets/admin/images/bk20.png)
 	}
 
 

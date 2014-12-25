@@ -150,15 +150,15 @@
 						<p>If you have any questions,Please contact us.</p>
 						<div class="blank10"></div>
 						<div class="from_box">
-							<form>
+							<form class="suggest">
 								<div class="name_email">
-									<input type="text" class="inputtext" name="name" value="name" onfocus="if(this.value=='name'){this.value='' }" onblur="if(this.value==''){this.value='name'}" style="margin-right:30px; ;" />
+									<input type="text" class="inputtext" id="suggest_name" name="name" value="name" onfocus="if(this.value=='name'){this.value='' }" onblur="if(this.value==''){this.value='name'}" style="margin-right:30px; ;" />
 
-									<input type="text" class="inputtext" name="email" value="email" onfocus="if(this.value=='email'){this.value='' }" onblur="if(this.value==''){this.value='email'}" />
+									<input type="text" class="inputtext" id="suggest_mobile" name="mobile" value="mobile" onfocus="if(this.value=='mobile'){this.value='' }" onblur="if(this.value==''){this.value='mobile'}" />
 
 								</div>
 								<div class="blank20"></div>
-								<textarea value="message" onfocus="if($.trim(this.value)=='message'){this.value='' }" onblur="if($.trim(this.value)==''){this.value='message'}">
+								<textarea value="message"  id="suggest_content">
 								</textarea>
 								<div class="blank20"></div>
 								<input type="submit" value="Send Message" class="sub" />
@@ -228,14 +228,14 @@
                 for(var i=page_index*items_per_page;i<max_elem;i++)
                 {
                 	if(data_id=="hot_news"){
-                		 newcontent += '<li><a href="javascript:void(0)" class="artile_show" data-id='+ hot_news[i][1]+'>' + hot_news[i][0].substr(0,20) + '</a></li>';
+                		 newcontent += '<li><a class="artile_show" data-id='+ hot_news[i][1]+'>' + hot_news[i][0].substr(0,20) + '</a></li>';
                 	}
                 	if(data_id=="news"){
-                		 newcontent += '<li><a href="javascript:void(0)" data-id='+ news[i][1]+'>' + news[i][0].substr(0,20) + '</a></li>';
+                		 newcontent += '<li><a class="artile_show"  data-id='+ news[i][1]+'>' + news[i][0].substr(0,20) + '</a></li>';
 
                 	}
                 	if(data_id=="notice"){
-                		 newcontent += '<li><a href="javascript:void(0)" class="artile_show" data-id='+ notices[i][1]+'>'+ notices[i][0].substr(0,20) + '</a></li>';
+                		 newcontent += '<li><a  class="artile_show" data-id='+ notices[i][1]+'>'+ notices[i][0].substr(0,20) + '</a></li>';
 
                 	}          
                   
@@ -253,23 +253,47 @@
 
                 $("#hot_new1").pagination(hot_news.length,{callback: pageselectCallback,items_per_page: 6,prev_text: "往前看看",next_text: "继续查看"})
                 $("#new1").pagination(news.length,{callback: pageselectCallback,items_per_page: 8,prev_text: "往前看看",next_text: "继续查看"})
-                $("#notice1").pagination(notices.length,{callback: pageselectCallback,items_per_page: 6,prev_text: "往前看看",next_text: "继续查看"})
+                $("#notice1").pagination(notices.length,{callback: pageselectCallback,items_per_page: 6,prev_text: "往前看看",next_text: "继续查看"});
+                $(".artile_show").click(function(){
+                var id=$(this).attr("data-id");
+             
+             	$.layer({
+             		 type: 2,
+                    shade: [0.8, '#000'],
+                 	type: 2,
+   				 	border: [0],
+  				  	title: false,
+				  	shadeClose: true,
+    				closeBtn: [0, true],
+    				offset: ['20px',''],
+                    area: ['600px', ($(window).height() - 50) +'px'],
+    				iframe: {src : '/articles/'+id}
+    				//area: ['600px', '600px']
+				});
+             })
 
+              $(".suggest").submit(function(){
+                  name=$("#suggest_name").val();
+                  mobile=$("#suggest_mobile").val();
+                  content=$("#suggest_content").val();
+                  if(name=="name" ||  name==""){alert("请填写名字");return false}
+                  if(mobile=="mobile" ||  mobile==""){alert("请填写名字");return false}
+                  $.post("/suggest",{name: name,mobile: mobile,content: content},function(data){alert("感谢您，我们会尽快与您联系")})
+                  return false
+ 
+
+              })
                 
 
             });
+
+
 
 
             
 
         </script>
 
-			<footer id="footer">
-
-				<p>© 2013 ShapeBootstrap. All Rights Reserved
-				</p>
-
-			</footer>
 
 
 		</div>
