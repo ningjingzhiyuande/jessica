@@ -30,10 +30,10 @@ img{border: 0;}
  height: 78px;   top: 0px; background: #fff; z-index: 1000;  box-shadow: 0px 2px 2px #999999; border-radius: 0px 0px 5px 5px;
 }
 #header #logo{ width: 30%; height: 78px; float: left;}
-#header #logo a{ display: block; margin: auto; width: 135px; height: 78px;  background:url(/assets/logo.jpg) no-repeat 0 50%;}
+#header #logo a{ display: block; margin: auto; width: 135px; height: 78px;  background:url(/images/logo.jpg) no-repeat 0 50%;}
 .header_right{ float: right; width: 70%;}
 .header_right ul li{ float: left; padding:0px  25px; height: 78px; line-height: 78px;  color: #999999; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -ms-transition: all 1s; -o-transition: all 1s ease; transition: all 1s ease ;}
-.icon-home{ display: block; width: 14px; height: 11px; overflow: hidden; margin-top: 32px; background: url(/assets/icon-assets.png) 0px 0px;}
+.icon-home{ display: block; width: 14px; height: 11px; overflow: hidden; margin-top: 32px; background: url(/images/icon-images.png) 0px 0px;}
 .header_right ul li.current{ background: #52b6ec;}
 .header_right ul li:hover{background: #52b6ec; color: #FFFFFF; cursor: pointer;}
 /*
@@ -57,9 +57,9 @@ filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
 
 .park01{ width:100%; background:#FFFFFF; overflow: hidden; box-shadow: 0px 2px 2px #E5E5E5;}
 .park01 .park01_one{ width:360px; height: 200px; padding: 20px 10px; margin-bottom: 15px; float: left; overflow: hidden;}
-.park01 .park01_one .park01_one_img{ width:87px; height: 84px; overflow: hidden; margin: auto; background: url(/assets/sex_artical_bk.jpg); }
+.park01 .park01_one .park01_one_img{ width:87px; height: 84px; overflow: hidden; margin: auto; background: url(/images/sex_artical_bk.jpg); }
 .park01 .park01_one .park01_one_img img{ display: block; }
-.park01 .park01_one .park01_one_img a{ display:block; width: 70px; height: 70px; position:absolute; top: 0px; left: 0px; background: url(/assets/park01_bk.png);}
+.park01 .park01_one .park01_one_img a{ display:block; width: 70px; height: 70px; position:absolute; top: 0px; left: 0px; background: url(/images/park01_bk.png);}
 .park01 .park01_one .park01_one_img  strong{ font-size: 40px; display: block; margin: 10px auto 0px; text-align: center; color: #FFFFFF;}
 .park01 .park01_one .park01_one_img p{ font-size: 9px; line-height: 14px; color: #FFFFFF; font-family: "Arial Bold";}
 .park01 .park01_one .park01_one_img:hover img{filter:alpha(opacity=70);-moz-opacity:0.7;-khtml-opacity: 0.7;opacity: 0.7;}
@@ -77,9 +77,9 @@ filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
 .park02_list{ width: 98%; padding:20px 1%; overflow: hidden;}
 .park02_list .park02_list_one{ width: 21%; margin: 10px 1%; padding:0px 1% 10px; background: #FFFFFF; overflow: hidden; float: left; display: inline;}
 .park02_list .park02_list_one .park02_list_one_img{ width: 230px; height: 160px; overflow: hidden; margin:10px auto; position: relative;}
-.park02_list .park02_list_one .park02_list_one_img a{background:url(/assets/white0.png); display:block; width: 100%; height: 100%; position: absolute; left: 0px; top: 0px;}
-.park02_list .park02_list_one .park02_list_one_img a i{ display: block; width: 38px; height: 32px; background:url(/assets/park02_eyes_bk.png); margin:70px auto 0px; display: none;}
-.park02_list .park02_list_one .park02_list_one_img a:hover{ background:url(/assets/white40.png)}
+.park02_list .park02_list_one .park02_list_one_img a{background:url(/images/white0.png); display:block; width: 100%; height: 100%; position: absolute; left: 0px; top: 0px;}
+.park02_list .park02_list_one .park02_list_one_img a i{ display: block; width: 38px; height: 32px; background:url(/images/park02_eyes_bk.png); margin:70px auto 0px; display: none;}
+.park02_list .park02_list_one .park02_list_one_img a:hover{ background:url(/images/white40.png)}
 .park02_list .park02_list_one .park02_list_one_img a:hover i{ display: block;}
 .park02_list .park02_list_one .park02_list_one_img a i:hover{filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8;-webkit-transition: all 1s ease; -moz-transition: all 1s ease; -ms-transition: all 1s; -o-transition: all 1s ease; transition: all 1s ease ; }
 .park02_list .park02_list_one figcaption{ text-align: center; font-size: 16px; color: #777777;}
@@ -89,7 +89,7 @@ filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
  */
 
 .new_park02{ width: 100%;background: #f0f0f0;box-shadow: 0px 2px 2px #E5E5E5; margin-top: 1px;}
-.new_park02 header{ width: 90%; margin: 0 auto; height: 88px; background: url(/assets/header_bk.jpg) repeat-x; overflow: hidden;}
+.new_park02 header{ width: 90%; margin: 0 auto; height: 88px; background: url(/images/header_bk.jpg) repeat-x; overflow: hidden;}
 .new_park02 header div{ padding: 0px 20px; line-height: 26px; margin: 17px  auto;  text-align: center; overflow: hidden; width: 480px; background: #f0f0f0;}
 .new_park02 header div strong{  font-size: 20px;}
 .new_park02 header div p{ font-size: 14px;}
@@ -110,7 +110,7 @@ filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
  */
 
 .park03{ background: #f0f0f0; }
-.park03 header{width: 90%; margin: 0 auto; height: 88px; background: url(/assets/header_bk.jpg) repeat-x; overflow: hidden;}
+.park03 header{width: 90%; margin: 0 auto; height: 88px; background: url(/images/header_bk.jpg) repeat-x; overflow: hidden;}
 .park03 header h1{ width: 500px; height: 80px; line-height: 80px; background: #f0f0f0; margin: auto ; font-size: 30px;}
 .park03_list_box{ overflow: hidden; margin: 20px 0px;}
 .park03_list_one { width: 320px;float: left; margin: 10px 30px;overflow: hidden; display: inline; background: #ffffff;  }
@@ -145,12 +145,12 @@ filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
 
 .park04_box ul { width: 5000px; position: absolute; left: 0px; top: 0px;}
 .park04_box ul li div{ width: 242px; height: 242px;  overflow: hidden; position: relative;}
-.park04_box ul li div a{ display: block; width:242px; height: 242px; position:absolute; left: 0px; top: 0px; background: url(/assets/park04_bk.png); }
+.park04_box ul li div a{ display: block; width:242px; height: 242px; position:absolute; left: 0px; top: 0px; background: url(/images/park04_bk.png); }
 .park04_box ul li h2{ font-size: 24px; line-height: 32px; margin-top: 15px; text-align: center; color: #777777;}
 .park04_box ul li  p{ font-size: 16px; line-height: 30px; text-align: center; color: #777777;}
 
-.park04_left{ display: block; width: 20px; height:32px; background: url(/assets/icon-assets.png) 0px -17px; position: absolute; top: 40%; left:10px;}
-.par04_right{display: block; width: 20px; height:32px; background: url(/assets/icon-assets.png) 0px -49px; position: absolute; top: 40%; right:10px;}
+.park04_left{ display: block; width: 20px; height:32px; background: url(/images/icon-images.png) 0px -17px; position: absolute; top: 40%; left:10px;}
+.par04_right{display: block; width: 20px; height:32px; background: url(/images/icon-images.png) 0px -49px; position: absolute; top: 40%; right:10px;}
 
 /*
  * new_park04
@@ -168,7 +168,7 @@ filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
 	content: "\e601";
 }
 .new_park04_content .li_top_video  a:hover{ color: #444444;}
-.new_park04_content ul li .li_top_box{top: 174px; background: url(/assets/green_60.png);}
+.new_park04_content ul li .li_top_box{top: 174px; background: url(/imeages/green_60.png);}
 .new_park04_content ul li .li_top_box h3{ font-size: 18px; font-weight: normal; height: 44px; line-height: 44px; padding-left: 10px;}
 .new_park04_content ul li .li_top_box h3 a{ color: #FFFFFF;}
 .new_park04_content ul li .li_top_box h3 a span{ font-size: 14px; margin-right:10px ; display: block; float: left;}
@@ -177,7 +177,7 @@ filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
 	
 }
 .new_park04_content ul li .li_top_box p{ font-size: 14px; padding:5px 10px; line-height: 20px; color: #FFFFFF;}
-.new_park04_content ul li .blue_60{ background:url(/assets/blue_60.png);}
+.new_park04_content ul li .blue_60{ background:url(/images/blue_60.png);}
 
 /*
  *park05 
