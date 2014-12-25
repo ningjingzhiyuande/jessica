@@ -3,7 +3,7 @@ lock '3.3.5'
 
 #server "192.81.135.229", :web, :app, :db, primary: true
 
-set :application, "jesscia"
+set :application, "jessica"
 set :full_app_name, "#{fetch(:application)}"
 set :default_stage, "production"
 set :user, "www"
