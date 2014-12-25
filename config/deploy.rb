@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.1
-lock '3.2.1'
+lock '3.3.5'
 
 #server "192.81.135.229", :web, :app, :db, primary: true
 
@@ -14,7 +14,7 @@ set :pty,true
 #set :bundle_flags, "--no-deployment"
 
 set :scm, "git"
-set :repo_url, "git@github.com:shiguodong/jesscia.git"
+set :repo_url, "git@github.com:shiguodong/jessica.git"
 set :branch, "master"
 set :keep_releases, 2
 

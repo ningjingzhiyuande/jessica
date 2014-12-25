@@ -1,4 +1,4 @@
-root = "/home/www/apps/jesscia"
+root = "/home/www/apps/jesscia/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn_jessica.pid"
 stderr_path "#{root}/log/unicorn_jessica.stderr.log"

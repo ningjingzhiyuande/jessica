@@ -12,7 +12,7 @@ set -e
 
 # Feel free to change any of the following variables for your app:
 TIMEOUT=${TIMEOUT-60}
-APP_ROOT=/home/www/apps/jesscia
+APP_ROOT=/home/www/apps/jesscia/current
 PID=$APP_ROOT/tmp/pids/unicorn_jessica.pid
 CMD="cd $APP_ROOT; bundle exec unicorn -D -c $APP_ROOT/config/unicorn.rb -E production"
 AS_USER=www
