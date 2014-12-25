@@ -68,7 +68,7 @@
 			<li>
 				<a href="/admin/homes/new?kind=about_us">关于我们</a>		
 			</li>
-			<%if current_admin.is_admin%>
+			<%if current_admin && current_admin.is_admin%>
 			  <li>
 				<a href="/admin/users">用户管理</a>		
 			  </li>
