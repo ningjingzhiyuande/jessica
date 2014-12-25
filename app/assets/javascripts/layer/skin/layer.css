@@ -34,7 +34,7 @@ html{background-image:url(about:blank); background-attachment:fixed;}
 .xubox_msgtype13{background-position:-206px -81px;}
 .xubox_msgtype14{background-position:-206px -122px;}
 .xubox_msgtype15{background-position:-206px -157px;}
-.xubox_loading_0{width:60px; height:24px; background:url(default/xubox_loading0.gif) no-repeat;}
+.xubox_loading_0{width:60px; height:24px; background:url(/layer/default/xubox_loading0.gif) no-repeat;}
 .xubox_loading_1{width:37px; height:37px; background:url(default/xubox_loading1.gif) no-repeat;}
 .xubox_loading_2, .xubox_msgtype16{width:32px; height:32px; background:url(default/xubox_loading2.gif) no-repeat;}
 .xubox_loading_3{width:126px; height:22px; background:url(default/xubox_loading3.gif) no-repeat;}
