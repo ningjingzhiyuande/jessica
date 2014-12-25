@@ -22,8 +22,6 @@ img{border: 0;}
 
 .wrap{ width: 100%; background:#e5e5e5; overflow: hidden; padding-top: 3px;}
 .icon-fonts{ font-family:'icomoon';}
-
-
 /********************************/
 /*
  * header
@@ -51,9 +49,6 @@ filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
 #banner ul  li{ text-align: center; color: #FFFFFF;}
 #banner ul  li h1{ font-size: 68px;}
 #banner ul  li p{ font-size: 21px; line-height: 32px;;}
-
-
-
 
 /*
  * park01
@@ -223,17 +218,12 @@ filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
 .pagination a, .pagination span {
     display: block;
     float: left;
-    padding: 0 10px;
-   
-
-  
+    padding: 0 10px; 
 
 }
 
 .pagination .current {
- 
-    color: #fff;
-	
+     color: #fff;	
 }
 
 .pagination .current.prev, .pagination .current.next{
