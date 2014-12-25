@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery-browser-plugin
 //= require jquery_ujs
-//= require ./layer/layer.min
+// require ./layer/layer.min
 //= require jquery.pagination
 
 // require turbolinks
