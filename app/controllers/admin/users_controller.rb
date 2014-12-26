@@ -5,7 +5,7 @@ class Admin::UsersController < Admin::BaseController
   def approve
   	user = Admin.find params[:id]
   	user.toggle!(:is_approve)
-  	redirect_to admin_services_url, notice: '修改成功'
+  	redirect_to admin_users_url, notice: '修改成功'
   end
 
   def destroy

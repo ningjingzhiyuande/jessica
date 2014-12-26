@@ -13,7 +13,9 @@ Jessica::Application.routes.draw do
      resources :articles
      resources :advantages
      resources :services
-     resources :users
+     resources :users do
+     	get :approve,on: :member
+     end
      resources :suggests
   end
 
