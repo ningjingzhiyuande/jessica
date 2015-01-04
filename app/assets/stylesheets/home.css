@@ -29,13 +29,20 @@ img{border: 0;}
 #header{ width: 1140px;position: fixed; left: 50%; margin-left:-570px;  _position:absolute; _top:expression(eval(document.documentElement.scrollTop));
  height: 78px;   top: 0px; background: #fff; z-index: 1000;  box-shadow: 0px 2px 2px #999999; border-radius: 0px 0px 5px 5px;
 }
-#header #logo{ width: 30%; height: 78px; float: left;}
+/*#header #logo{ width: 30%; height: 78px; float: left;}
 #header #logo a{ display: block; margin: auto; width: 135px; height: 78px;  background:url(/images/logo.jpg) no-repeat 0 50%;}
-.header_right{ float: right; width: 70%;}
-.header_right ul li{ float: left; padding:0px  25px; height: 78px; line-height: 78px;  color: #999999; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -ms-transition: all 1s; -o-transition: all 1s ease; transition: all 1s ease ;}
-.icon-home{ display: block; width: 14px; height: 11px; overflow: hidden; margin-top: 32px; background: url(/images/icon-images.png) 0px 0px;}
+.header_right{ float: right; width: 70%;}*/
+#header #logo{ width: 35%; height: 78px; float: left;}
+
+
+#header #logo a{ display: block; margin: auto; width: 310px; height: 78px;  background:url(/images/logo.png) no-repeat 0 50%;}
 .header_right ul li.current{ background: #52b6ec;}
 .header_right ul li:hover{background: #52b6ec; color: #FFFFFF; cursor: pointer;}
+
+.header_right ul li{ float: left; padding:15px  25px 0px; height: 63px; line-height: 26px; text-align: center;  color: #999999; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -ms-transition: all 1s; -o-transition: all 1s ease; transition: all 1s ease ;}
+.header_right ul li span{ display: block;font-size: 12px;}
+.icon-home{ display: block; width: 14px; height: 11px; overflow: hidden; margin-top: 22px; background: url(/images/icon-images.png) 0px 0px;}
+
 /*
  * banner
  */

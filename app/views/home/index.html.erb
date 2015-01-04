@@ -9,11 +9,21 @@
 					<ul id="nav">
 						<li class="current"><i class="icon-home"></i>
 						</li>
-						<li>Services</li>
-						<li>Advantage</li>
-						<li>Article</li>
-						<li>About Us</li>
-						<li>Contact</li>
+						<li>服务
+						 <span>services</span>
+						</li>
+						<li>优势
+						<span>Portfolio</span>
+						</li>
+						<li>撰文
+						<span>Picing</span>
+						</li>
+						<li>关于我们
+						<span>About Us</span>
+						</li>
+						<li>联系我们
+						<span>Contact</span>
+						</li>
 
 					</ul>
 
@@ -21,7 +31,7 @@
 
 			</header>
 
-			<section id="banner" style="background:#003583 url(/images/top_bk.jpg) center no-repeat;">
+			<section id="banner" style="background:#003583 url(/images/top_bk.png) center no-repeat;">
 				<!--<ul id="bannerul">
 					<li>
 						<h1>Free Onepage Theme</h1>
@@ -47,8 +57,8 @@
 				<section class="new_park02">
 					<header>
 						<div>
-							<strong>与来自全球两千位以上的外籍顾问在线面对面</strong>
-							<p>即时互动学习随时随地、立即开口、即学即用、轻轻松松就把英文学好了！</p>
+							<strong>完美的教学服务和管理,切合一流的教学质量</strong>
+							<p>培训出进入美国顶尖大学的国际型人才！</p>
 						</div>
 					</header>
 					<div class="new_park02_content">
@@ -175,16 +185,17 @@
 							<br /> P: 010-61994401
 						</p>
 						<p class="address">
-							<strong>Jessica's Education .INC</strong>
+							<strong>JESSICA'S EDUCATION.INC</strong>
 							<br /> Room 1105 NO.2, A Building,HouXianDaiCheng
 							<br /> 16 BaiZiWan Road,ChaoYang District BeiJing City
 							<br /> P: 010-61994401
+							<br /> 李老师: 18600429984 13699270956
+
 						</p>
 
 						<div class="blank10"> </div>
 						<ul class="icon-social">
-							<img src="http://api.map.baidu.com/staticimage?width=700&height=200&center=北京朝阳区百子湾路16号&markers=后现代城2号楼A单元1105室&zoom=12&markerStyles=l,A,0xff0000"/>
-
+							 <div style="width:697px;height:200px;border:#ccc solid 1px;" id="dituContent"></div>
 						</ul>
 
 
@@ -299,5 +310,116 @@
 
 
 		</div>
+
+
+<!--引用百度地图API-->
+<style type="text/css">
+  
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(116.496748,39.905316);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"后现代城2号楼A单元",content:"我的备注",point:"116.494889|39.905814",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+</html>
+
 
 
