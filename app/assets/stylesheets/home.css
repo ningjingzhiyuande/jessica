@@ -189,7 +189,7 @@ filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
 /*
  *park05 
  */
-.park05{ background: #222222; padding:100px 0px 70px;overflow: hidden; height: 420px;}
+.park05{ background: #222222; padding:40px 0px 70px;overflow: hidden; height: 420px;}
 .park05_left{width:550px; padding: 0px 20px; overflow: hidden;  float: left; }
 .park05_left h1{ font-size: 36px; color: #FFFFFF;}
 .park05_left p{ line-height: 26px; font-size: 14px; color: #FFFFFF;}
