@@ -264,6 +264,15 @@
              
               $(document).ready(function(){
 
+              	 $("#new_park04_content>ul>li").hover(function(){
+              	$(this).find(".li_top_box").stop(true,true)
+              	$(this).find(".li_top_box").animate({"top":0},500)
+              },function(){
+              	$(this).find(".li_top_box").animate({"top":174},500)
+              })
+
+              	 
+
                 $("#hot_new1").pagination(hot_news.length,{callback: pageselectCallback,items_per_page: 6,prev_text: "往前看看",next_text: "继续查看"})
                 $("#new1").pagination(news.length,{callback: pageselectCallback,items_per_page: 8,prev_text: "往前看看",next_text: "继续查看"})
                 $("#notice1").pagination(notices.length,{callback: pageselectCallback,items_per_page: 6,prev_text: "往前看看",next_text: "继续查看"});
