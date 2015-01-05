@@ -36,13 +36,13 @@ img{border: 0;}
 
 
 #header #logo a{ display: block; margin: auto; width: 310px; height: 78px;  background:url(/images/logo.png) no-repeat 0 50%;}
-.header_right ul li.current{ background: #52b6ec;}
+
 .header_right ul li:hover{background: #52b6ec; color: #FFFFFF; cursor: pointer;}
 
 .header_right ul li{ float: left; padding:15px  25px 0px; height: 63px; line-height: 26px; text-align: center;  color: #999999; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -ms-transition: all 1s; -o-transition: all 1s ease; transition: all 1s ease ;}
 .header_right ul li span{ display: block;font-size: 12px;}
 .icon-home{ display: block; width: 14px; height: 11px; overflow: hidden; margin-top: 22px; background: url(/images/icon-images.png) 0px 0px;}
-
+.header_right ul li.current{ background: #52b6ec; color:#fff;}
 /*
  * banner
  */

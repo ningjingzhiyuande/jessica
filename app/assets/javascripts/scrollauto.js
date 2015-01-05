@@ -45,13 +45,13 @@ $(document).ready(function(e){
 					ckickgo(".park01")
 					break;
 					case 2:
-					ckickgo(".park02")
+					ckickgo(".new_park02")
 					break;
 					case 3:
 					ckickgo(".park03")
 					break;
 					case 4:
-					ckickgo(".park04")
+					ckickgo(".new_park04")
 					break;
 					case 5:
 					ckickgo(".park05")
