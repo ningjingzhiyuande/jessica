@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  layout  false,only: [:articles]
+  layout  false,only: [:articles,:advances]
   def index
   	@hot_news = Article.where("kind=?",Article.kinds["hot_news"])
   	@news = Article.where("kind=?",Article.kinds["news"])
@@ -8,8 +8,10 @@ class HomeController < ApplicationController
   end
   def articles
   	 @article = Article.find params[:id]
-  	
+  end
 
+  def advances
+  	 @advance = Advantage.find params[:id]
   end
 
   def suggest

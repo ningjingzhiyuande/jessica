@@ -35,7 +35,7 @@ img{border: 0;}
 #header #logo{ width: 35%; height: 78px; float: left;}
 
 
-#header #logo a{ display: block; margin: auto; width: 310px; height: 78px;  background:url(/images/logo.png) no-repeat 0 50%;}
+#header #logo a{ display: block; margin: auto; width: 310px; height: 78px;  background:url(/images/logo.jpg) no-repeat 0 50%;}
 
 .header_right ul li:hover{background: #52b6ec; color: #FFFFFF; cursor: pointer;}
 

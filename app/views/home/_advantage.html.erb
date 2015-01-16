@@ -4,12 +4,12 @@
 		<li>
 		<div class="new_park02_img">
 			<%=image_tag a.image_url,width: 205,height: 205%>
-
-		<a href="#" class="hover1s">
+		  <a class="hover1s  popup_advance" data-url="/advances/<%=a.id%>">
 		</a>
 		</div>
-		<h3><a href="javacirpt:void(0)" class="hover1s"><%=a.title%></a></h3>
+		<h3><a class="hover1s  popup_advance" data-url="/advances/<%=a.id%>"><%=a.title%></a></h3>
 	<p><%=a.info%></p>
 </li>
 	<%end%>						
 </ul>
+

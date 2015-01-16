@@ -1,6 +1,7 @@
 Jessica::Application.routes.draw do
   #
   get "articles/:id"=>"home#articles"
+  get "advances/:id"=>"home#advances"
   post "suggest" => "home#suggest"
   devise_for :admin, controllers: { sessions: "admin/sessions" ,registrations: "admin/registrations"}
   get "main" =>"admin/homes#index"

@@ -241,14 +241,14 @@
                 for(var i=page_index*items_per_page;i<max_elem;i++)
                 {
                 	if(data_id=="hot_news"){
-                		 newcontent += '<li><a class="artile_show" data-id='+ hot_news[i][1]+'>' + hot_news[i][0].substr(0,20) + '</a></li>';
+                		 newcontent += '<li><a class="artile_show" data-url=/articles/'+hot_news[i][1]+' data-id='+ hot_news[i][1]+'>' + hot_news[i][0].substr(0,20) + '</a></li>';
                 	}
                 	if(data_id=="news"){
-                		 newcontent += '<li><a class="artile_show"  data-id='+ news[i][1]+'>' + news[i][0].substr(0,20) + '</a></li>';
+                		 newcontent += '<li><a class="artile_show" data-url=/articles/'+news[i][1]+' data-id='+ news[i][1]+'>' + news[i][0].substr(0,20) + '</a></li>';
 
                 	}
                 	if(data_id=="notice"){
-                		 newcontent += '<li><a  class="artile_show" data-id='+ notices[i][1]+'>'+ notices[i][0].substr(0,20) + '</a></li>';
+                		 newcontent += '<li><a  class="artile_show" data-url=/articles/'+notices[i][1]+' data-id='+ notices[i][1]+'>'+ notices[i][0].substr(0,20) + '</a></li>';
 
                 	}          
                   
@@ -278,6 +278,7 @@
                 $("#notice1").pagination(notices.length,{callback: pageselectCallback,items_per_page: 6,prev_text: "往前看看",next_text: "继续查看"});
 
                 $(".artile_show").click(function(){
+              
                 var id=$(this).attr("data-id");
               
              	$.layer({
@@ -294,6 +295,28 @@
     				//area: ['600px', '600px']
 				});
              })
+
+               $(".popup_advance").click(function(){
+               //	alert(333)
+               	 var url=$(this).attr("data-url");
+           
+             	$.layer({
+             		 type: 2,
+                    shade: [0.8, '#000'],
+                 	type: 2,
+   				 	border: [0],
+  				  	title: false,
+				  	shadeClose: true,
+    				closeBtn: [0, true],
+    				offset: ['20px',''],
+                    area: ['600px', ($(window).height() - 50) +'px'],
+    				iframe: {src : url}
+    				//area: ['600px', '600px']
+				});
+
+
+
+               })
 
               $(".suggest").submit(function(){
                   name=$("#suggest_name").val();

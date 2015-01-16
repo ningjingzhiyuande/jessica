@@ -20,6 +20,12 @@
     <%= image_tag(@advantage.image_url,width:205, height: 205) if @advantage.image? %> <br/>
 			<%= f.file_field :image%>   <b class="follow_msg">最好是205X205尺寸</b></span>    
     </li>
+
+      <li> 
+		<span class="width_align_right">弹出显示内容 </span>
+		<span class="width_content"><%= f.kindeditor :content,height: 600 %></span>    
+    </li>
+
    
     <li><span class="width_align_right">  <p></p> </span>
     	<span class="width_content">
