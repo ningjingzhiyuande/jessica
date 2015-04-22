@@ -5,6 +5,8 @@ class HomeController < ApplicationController
   	@news = Article.where("kind=?",Article.kinds["news"])
   	@notices = Article.where("kind=?",Article.kinds["notice"])
   	@images = Home.where("title!='关于我们'").limit(7)
+  	
+  	logger.error("referer is: "+request.referer.to_s)
   end
   def articles
   	 @article = Article.find params[:id]
